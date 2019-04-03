@@ -52,10 +52,21 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MagicianForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MagicianForm.Designer.cs">
+      <DependentUpon>MagicianForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Magician.cs" />
+    <Compile Include="Models\MagicMinistry.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MagicianForm.resx">
+      <DependentUpon>MagicianForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +78,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\Tidele_Alejandro.Models.Magician.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -82,6 +94,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Snitch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hogwarts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gryffindor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slytherin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hufflepuff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ravenclaw.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

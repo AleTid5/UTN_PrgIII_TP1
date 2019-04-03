@@ -29,7 +29,44 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BrujasYMagosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miembrosDelMinisterioDeMagiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opcionesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // opcionesToolStripMenuItem
+            // 
+            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BrujasYMagosToolStripMenuItem,
+            this.miembrosDelMinisterioDeMagiaToolStripMenuItem});
+            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
+            this.opcionesToolStripMenuItem.Text = "Opciones mágicas";
+            // 
+            // BrujasYMagosToolStripMenuItem
+            // 
+            this.BrujasYMagosToolStripMenuItem.Name = "BrujasYMagosToolStripMenuItem";
+            this.BrujasYMagosToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
+            this.BrujasYMagosToolStripMenuItem.Text = "Brujas y Magos";
+            this.BrujasYMagosToolStripMenuItem.Click += new System.EventHandler(this.BrujasYMagosToolStripMenuItem_Click);
+            // 
+            // miembrosDelMinisterioDeMagiaToolStripMenuItem
+            // 
+            this.miembrosDelMinisterioDeMagiaToolStripMenuItem.Name = "miembrosDelMinisterioDeMagiaToolStripMenuItem";
+            this.miembrosDelMinisterioDeMagiaToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
+            this.miembrosDelMinisterioDeMagiaToolStripMenuItem.Text = "Miembros del ministerio de magia";
             // 
             // Form1
             // 
@@ -38,17 +75,29 @@
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.BackgroundImage = global::Tidele_Alejandro.Properties.Resources.Snitch;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 511);
+            this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hogwarts School | Draco Dormiens Nunquam Titillandus";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem BrujasYMagosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem miembrosDelMinisterioDeMagiaToolStripMenuItem;
     }
 }
 
