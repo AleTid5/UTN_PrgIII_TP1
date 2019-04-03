@@ -9,3 +9,4 @@ C:\Users\Alejandro\Desktop\Guardar\Universidad\UTN FRGP\TSP\Programación III\TP
 C:\Users\Alejandro\Desktop\Guardar\Universidad\UTN FRGP\TSP\Programación III\TP Introductorio I\Tidele_Alejandro\Tidele_Alejandro\obj\Debug\Tidele_Alejandro.exe
 C:\Users\Alejandro\Desktop\Guardar\Universidad\UTN FRGP\TSP\Programación III\TP Introductorio I\Tidele_Alejandro\Tidele_Alejandro\obj\Debug\Tidele_Alejandro.pdb
 C:\Users\Alejandro\Desktop\Guardar\Universidad\UTN FRGP\TSP\Programación III\TP Introductorio I\Tidele_Alejandro\Tidele_Alejandro\obj\Debug\Tidele_Alejandro.Forms.MagicianForm.resources
+C:\Users\Alejandro\Desktop\Guardar\Universidad\UTN FRGP\TSP\Programación III\TP Introductorio I\Tidele_Alejandro\Tidele_Alejandro\obj\Debug\Tidele_Alejandro.Forms.MagicMinistryForm.resources

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MagicianForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Age = new System.Windows.Forms.Label();
-            this.create = new System.Windows.Forms.Button();
             this.cleanBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.House = new System.Windows.Forms.ComboBox();
@@ -62,6 +61,7 @@
             this.remove = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.create = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.Preferences.SuspendLayout();
             this.Kind.SuspendLayout();
@@ -102,20 +102,6 @@
             this.Age.Size = new System.Drawing.Size(112, 19);
             this.Age.TabIndex = 19;
             this.Age.Text = "TextToBeChanged";
-            // 
-            // create
-            // 
-            this.create.BackColor = System.Drawing.Color.DarkRed;
-            this.create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.create.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.create.ForeColor = System.Drawing.Color.Snow;
-            this.create.Location = new System.Drawing.Point(374, 264);
-            this.create.Name = "create";
-            this.create.Size = new System.Drawing.Size(132, 23);
-            this.create.TabIndex = 18;
-            this.create.Text = "Crear";
-            this.create.UseVisualStyleBackColor = false;
-            this.create.Click += new System.EventHandler(this.create_Click);
             // 
             // cleanBtn
             // 
@@ -421,6 +407,7 @@
             // dgvMagicians
             // 
             this.dgvMagicians.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMagicians.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvMagicians.Location = new System.Drawing.Point(12, 313);
             this.dgvMagicians.Name = "dgvMagicians";
             this.dgvMagicians.Size = new System.Drawing.Size(776, 163);
@@ -467,6 +454,20 @@
             this.button3.Text = "Volver";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // create
+            // 
+            this.create.BackColor = System.Drawing.Color.DarkRed;
+            this.create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.create.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.create.ForeColor = System.Drawing.Color.Snow;
+            this.create.Location = new System.Drawing.Point(374, 264);
+            this.create.Name = "create";
+            this.create.Size = new System.Drawing.Size(132, 23);
+            this.create.TabIndex = 18;
+            this.create.Text = "Crear";
+            this.create.UseVisualStyleBackColor = false;
+            this.create.Click += new System.EventHandler(this.create_Click);
             // 
             // MagicianForm
             // 
@@ -531,12 +532,12 @@
         private System.Windows.Forms.RadioButton Witch;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox House;
-        private System.Windows.Forms.Button create;
         private System.Windows.Forms.Button cleanBtn;
         private System.Windows.Forms.Label Age;
         private System.Windows.Forms.DataGridView dgvMagicians;
         private System.Windows.Forms.Button remove;
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button create;
     }
 }

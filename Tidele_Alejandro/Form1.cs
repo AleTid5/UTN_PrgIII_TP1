@@ -28,8 +28,14 @@ namespace Tidele_Alejandro
         {
             MagicianForm magicianForm = new MagicianForm();
             magicianForm.SetParentForm(this);
-            //magicianForm.SetMagicians(this.magicians);
             magicianForm.ShowDialog();
+        }
+
+        private void miembrosDelMinisterioDeMagiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MagicMinistryForm magicMinistryForm = new MagicMinistryForm();
+            magicMinistryForm.SetParentForm(this);
+            magicMinistryForm.ShowDialog();
         }
     }
 }

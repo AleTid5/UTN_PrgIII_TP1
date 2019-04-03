@@ -26,8 +26,6 @@ namespace Tidele_Alejandro.Forms
 
         public void SetParentForm(Form1 ParentForm) => this.ParentForm = ParentForm;
 
-        //public void SetMagicians(List<Magician> Magicians) => this.Magicians = Magicians;
-
         private void MagicianForm_Load(object sender, EventArgs e)
         {
             this.Age.Text = this.getAge();

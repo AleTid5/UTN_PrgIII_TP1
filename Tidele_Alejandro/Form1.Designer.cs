@@ -67,6 +67,7 @@
             this.miembrosDelMinisterioDeMagiaToolStripMenuItem.Name = "miembrosDelMinisterioDeMagiaToolStripMenuItem";
             this.miembrosDelMinisterioDeMagiaToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
             this.miembrosDelMinisterioDeMagiaToolStripMenuItem.Text = "Miembros del ministerio de magia";
+            this.miembrosDelMinisterioDeMagiaToolStripMenuItem.Click += new System.EventHandler(this.miembrosDelMinisterioDeMagiaToolStripMenuItem_Click);
             // 
             // Form1
             // 
