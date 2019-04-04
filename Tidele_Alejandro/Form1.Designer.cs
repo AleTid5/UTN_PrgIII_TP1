@@ -33,6 +33,9 @@
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BrujasYMagosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miembrosDelMinisterioDeMagiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeAll = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +72,48 @@
             this.miembrosDelMinisterioDeMagiaToolStripMenuItem.Text = "Miembros del ministerio de magia";
             this.miembrosDelMinisterioDeMagiaToolStripMenuItem.Click += new System.EventHandler(this.miembrosDelMinisterioDeMagiaToolStripMenuItem_Click);
             // 
+            // closeAll
+            // 
+            this.closeAll.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.closeAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeAll.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.closeAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeAll.ForeColor = System.Drawing.Color.Snow;
+            this.closeAll.Location = new System.Drawing.Point(282, 433);
+            this.closeAll.Name = "closeAll";
+            this.closeAll.Size = new System.Drawing.Size(234, 71);
+            this.closeAll.TabIndex = 24;
+            this.closeAll.Text = "Finite Incantatem";
+            this.closeAll.UseVisualStyleBackColor = false;
+            this.closeAll.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkRed;
+            this.button2.BackgroundImage = global::Tidele_Alejandro.Properties.Resources.Magicians1;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Location = new System.Drawing.Point(3, 27);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(273, 479);
+            this.button2.TabIndex = 26;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Teal;
+            this.button1.BackgroundImage = global::Tidele_Alejandro.Properties.Resources.Morsmordre1;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(522, 27);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(273, 479);
+            this.button1.TabIndex = 27;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -76,7 +121,11 @@
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.BackgroundImage = global::Tidele_Alejandro.Properties.Resources.Snitch;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.CancelButton = this.closeAll;
             this.ClientSize = new System.Drawing.Size(800, 511);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.closeAll);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -99,6 +148,9 @@
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem BrujasYMagosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem miembrosDelMinisterioDeMagiaToolStripMenuItem;
+        private System.Windows.Forms.Button closeAll;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

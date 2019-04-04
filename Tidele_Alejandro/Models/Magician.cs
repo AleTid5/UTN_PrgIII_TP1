@@ -23,14 +23,25 @@ namespace Tidele_Alejandro.Models
 
         public bool Validate()
         {
-            return !String.IsNullOrEmpty(this.Name) &&
-                   !String.IsNullOrWhiteSpace(this.Name) &&
-                   !String.IsNullOrEmpty(this.Lastname) &&
+            return !String.IsNullOrEmpty(this.Name)          &&
+                   !String.IsNullOrWhiteSpace(this.Name)     &&
+                   !String.IsNullOrEmpty(this.Lastname)      &&
                    !String.IsNullOrWhiteSpace(this.Lastname) &&
-                   !String.IsNullOrEmpty(this.Kind) &&
-                   !String.IsNullOrWhiteSpace(this.Kind) &&
-                   !String.IsNullOrEmpty(this.House) &&
-                   !String.IsNullOrEmpty(this.House);
+                   !String.IsNullOrEmpty(this.Kind)          &&
+                   !String.IsNullOrWhiteSpace(this.Kind)     &&
+                   !String.IsNullOrEmpty(this.House)         &&
+                   !String.IsNullOrEmpty(this.House)         &&
+                   this.hasCheckedAtLeastOneSubject();
+        }
+
+        private bool hasCheckedAtLeastOneSubject()
+        {
+            foreach (bool isSubjectChecked in this.Subjects)
+            {
+                if (isSubjectChecked) return true;
+            }
+
+            return false;
         }
     }
 }

@@ -119,5 +119,17 @@
   <ItemGroup>
     <None Include="Resources\Ravenclaw.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magicians.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magicians1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Morsmordre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Morsmordre1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MagicianForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Age = new System.Windows.Forms.Label();
+            this.create = new System.Windows.Forms.Button();
             this.cleanBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.House = new System.Windows.Forms.ComboBox();
@@ -60,8 +61,7 @@
             this.dgvMagicians = new System.Windows.Forms.DataGridView();
             this.remove = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.create = new System.Windows.Forms.Button();
+            this.goBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.Preferences.SuspendLayout();
             this.Kind.SuspendLayout();
@@ -103,9 +103,25 @@
             this.Age.TabIndex = 19;
             this.Age.Text = "TextToBeChanged";
             // 
+            // create
+            // 
+            this.create.BackColor = System.Drawing.Color.DarkRed;
+            this.create.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.create.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.create.ForeColor = System.Drawing.Color.Snow;
+            this.create.Location = new System.Drawing.Point(374, 264);
+            this.create.Name = "create";
+            this.create.Size = new System.Drawing.Size(132, 23);
+            this.create.TabIndex = 18;
+            this.create.Text = "Crear";
+            this.create.UseVisualStyleBackColor = false;
+            this.create.Click += new System.EventHandler(this.create_Click);
+            // 
             // cleanBtn
             // 
             this.cleanBtn.BackColor = System.Drawing.Color.DimGray;
+            this.cleanBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cleanBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cleanBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cleanBtn.ForeColor = System.Drawing.Color.Snow;
@@ -166,6 +182,7 @@
             // cb5
             // 
             this.cb5.AutoSize = true;
+            this.cb5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb5.Font = new System.Drawing.Font("Poor Richard", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb5.Location = new System.Drawing.Point(233, 73);
             this.cb5.Name = "cb5";
@@ -177,6 +194,7 @@
             // cb2
             // 
             this.cb2.AutoSize = true;
+            this.cb2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb2.Font = new System.Drawing.Font("Poor Richard", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cb2.Location = new System.Drawing.Point(6, 73);
             this.cb2.Name = "cb2";
@@ -188,6 +206,7 @@
             // cb4
             // 
             this.cb4.AutoSize = true;
+            this.cb4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb4.Font = new System.Drawing.Font("Poor Richard", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cb4.Location = new System.Drawing.Point(233, 46);
             this.cb4.Name = "cb4";
@@ -199,6 +218,7 @@
             // cb1
             // 
             this.cb1.AutoSize = true;
+            this.cb1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb1.Font = new System.Drawing.Font("Poor Richard", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cb1.Location = new System.Drawing.Point(6, 46);
             this.cb1.Name = "cb1";
@@ -210,6 +230,7 @@
             // cb3
             // 
             this.cb3.AutoSize = true;
+            this.cb3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb3.Font = new System.Drawing.Font("Poor Richard", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cb3.Location = new System.Drawing.Point(233, 19);
             this.cb3.Name = "cb3";
@@ -221,6 +242,7 @@
             // cb0
             // 
             this.cb0.AutoSize = true;
+            this.cb0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb0.Font = new System.Drawing.Font("Poor Richard", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cb0.Location = new System.Drawing.Point(6, 19);
             this.cb0.Name = "cb0";
@@ -257,6 +279,7 @@
             // Muggle
             // 
             this.Muggle.AutoSize = true;
+            this.Muggle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Muggle.Font = new System.Drawing.Font("Poor Richard", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Muggle.Location = new System.Drawing.Point(138, 19);
             this.Muggle.Name = "Muggle";
@@ -268,6 +291,7 @@
             // Witch
             // 
             this.Witch.AutoSize = true;
+            this.Witch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Witch.Font = new System.Drawing.Font("Poor Richard", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Witch.Location = new System.Drawing.Point(73, 19);
             this.Witch.Name = "Witch";
@@ -280,6 +304,7 @@
             // 
             this.Magician.AutoSize = true;
             this.Magician.Checked = true;
+            this.Magician.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Magician.Font = new System.Drawing.Font("Poor Richard", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Magician.Location = new System.Drawing.Point(6, 19);
             this.Magician.Name = "Magician";
@@ -298,7 +323,7 @@
             this.BornDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BornDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.BornDate.Location = new System.Drawing.Point(205, 80);
-            this.BornDate.MaxDate = new System.DateTime(2019, 4, 2, 0, 0, 0, 0);
+            this.BornDate.MaxDate = new System.DateTime(2019, 4, 3, 0, 0, 0, 0);
             this.BornDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.BornDate.Name = "BornDate";
             this.BornDate.Size = new System.Drawing.Size(204, 20);
@@ -406,6 +431,11 @@
             // 
             // dgvMagicians
             // 
+            this.dgvMagicians.AllowUserToAddRows = false;
+            this.dgvMagicians.AllowUserToDeleteRows = false;
+            this.dgvMagicians.AllowUserToResizeColumns = false;
+            this.dgvMagicians.AllowUserToResizeRows = false;
+            this.dgvMagicians.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMagicians.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMagicians.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvMagicians.Location = new System.Drawing.Point(12, 313);
@@ -416,6 +446,7 @@
             // remove
             // 
             this.remove.BackColor = System.Drawing.Color.DarkRed;
+            this.remove.Cursor = System.Windows.Forms.Cursors.Hand;
             this.remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.remove.ForeColor = System.Drawing.Color.Snow;
@@ -430,6 +461,7 @@
             // edit
             // 
             this.edit.BackColor = System.Drawing.SystemColors.Desktop;
+            this.edit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edit.ForeColor = System.Drawing.Color.Snow;
@@ -441,43 +473,33 @@
             this.edit.UseVisualStyleBackColor = false;
             this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
-            // button3
+            // goBack
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Snow;
-            this.button3.Location = new System.Drawing.Point(12, 482);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 23);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Volver";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // create
-            // 
-            this.create.BackColor = System.Drawing.Color.DarkRed;
-            this.create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.create.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.create.ForeColor = System.Drawing.Color.Snow;
-            this.create.Location = new System.Drawing.Point(374, 264);
-            this.create.Name = "create";
-            this.create.Size = new System.Drawing.Size(132, 23);
-            this.create.TabIndex = 18;
-            this.create.Text = "Crear";
-            this.create.UseVisualStyleBackColor = false;
-            this.create.Click += new System.EventHandler(this.create_Click);
+            this.goBack.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.goBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.goBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.goBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.goBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goBack.ForeColor = System.Drawing.Color.Snow;
+            this.goBack.Location = new System.Drawing.Point(12, 482);
+            this.goBack.Name = "goBack";
+            this.goBack.Size = new System.Drawing.Size(132, 23);
+            this.goBack.TabIndex = 22;
+            this.goBack.Text = "Finite";
+            this.goBack.UseVisualStyleBackColor = false;
+            this.goBack.Click += new System.EventHandler(this.button3_Click);
             // 
             // MagicianForm
             // 
+            this.AcceptButton = this.create;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.BackgroundImage = global::Tidele_Alejandro.Properties.Resources.Snitch;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CancelButton = this.goBack;
             this.ClientSize = new System.Drawing.Size(800, 511);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.goBack);
             this.Controls.Add(this.remove);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.dgvMagicians);
@@ -537,7 +559,7 @@
         private System.Windows.Forms.DataGridView dgvMagicians;
         private System.Windows.Forms.Button remove;
         private System.Windows.Forms.Button edit;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button goBack;
         private System.Windows.Forms.Button create;
     }
 }

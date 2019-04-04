@@ -17,7 +17,7 @@ namespace Tidele_Alejandro
         public int magicianID = 0;
         public int magicianMinistryID = 0;
         public List<Magician> Magicians = new List<Magician>();
-        public List<MagicMinistry> MagicMinistries = new List<MagicMinistry>();
+        public MagicMinistry MagicMinistry = new MagicMinistry();
 
         public Form1()
         {
@@ -36,6 +36,21 @@ namespace Tidele_Alejandro
             MagicMinistryForm magicMinistryForm = new MagicMinistryForm();
             magicMinistryForm.SetParentForm(this);
             magicMinistryForm.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.BrujasYMagosToolStripMenuItem_Click(sender, e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.miembrosDelMinisterioDeMagiaToolStripMenuItem_Click(sender, e);
         }
     }
 }

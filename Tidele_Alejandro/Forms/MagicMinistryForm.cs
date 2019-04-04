@@ -21,14 +21,100 @@ namespace Tidele_Alejandro.Forms
 
         public void SetParentForm(Form1 ParentForm) => this.ParentForm = ParentForm;
 
-        private void MagicMinistryForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void MagicMinistryForm_Load(object sender, EventArgs e)
+        {
+            foreach (string magician in this.ParentForm.MagicMinistry.InactiveMagicians)
+            {
+                ListViewItem list = new ListViewItem(magician);
+                this.disabledList.Items.Add(list);
+            }
+
+            foreach (string magician in this.ParentForm.MagicMinistry.ActiveMagicians)
+            {
+                ListViewItem list = new ListViewItem(magician);
+                this.activeList.Items.Add(list);
+            }
+
+            UpdateListCount();
+        }
+
+        private void createBtn_Click(object sender, EventArgs e)
+        {
+            string magician = this.createBox.Text.ToString();
+            if (String.IsNullOrEmpty(magician) || String.IsNullOrWhiteSpace(magician)) return;
+
+            this.createBox.Text = null;
+            this.ParentForm.MagicMinistry.InactiveMagicians.Add(magician);
+            ListViewItem listViewItem = new ListViewItem(magician);
+            this.disabledList.Items.Add(listViewItem);
+
+            UpdateListCount();
+        }
+        private void activateBtn_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem listViewItem in this.disabledList.SelectedItems)
+            {
+                string magician = this.ParentForm.MagicMinistry.InactiveMagicians[listViewItem.Index];
+                this.ParentForm.MagicMinistry.InactiveMagicians.RemoveAt(listViewItem.Index);
+                this.ParentForm.MagicMinistry.ActiveMagicians.Add(magician);
+                ListViewItem list = new ListViewItem(magician);
+                this.activeList.Items.Add(list);
+                this.disabledList.Items.RemoveAt(listViewItem.Index);
+            }
+
+            UpdateListCount();
+        }
+
+        private void activateAllBtn_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem listViewItem in this.disabledList.Items)
+            {
+                string magician = this.ParentForm.MagicMinistry.InactiveMagicians[listViewItem.Index];
+                this.ParentForm.MagicMinistry.InactiveMagicians.RemoveAt(listViewItem.Index);
+                this.ParentForm.MagicMinistry.ActiveMagicians.Add(magician);
+                ListViewItem list = new ListViewItem(magician);
+                this.activeList.Items.Add(list);
+                this.disabledList.Items.RemoveAt(listViewItem.Index);
+            }
+
+            UpdateListCount();
+        }
+
+        private void disableBtn_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem listViewItem in this.activeList.SelectedItems)
+            {
+                string magician = this.ParentForm.MagicMinistry.ActiveMagicians[listViewItem.Index];
+                this.ParentForm.MagicMinistry.ActiveMagicians.RemoveAt(listViewItem.Index);
+                this.ParentForm.MagicMinistry.InactiveMagicians.Add(magician);
+                ListViewItem list = new ListViewItem(magician);
+                this.disabledList.Items.Add(list);
+                this.activeList.Items.RemoveAt(listViewItem.Index);
+            }
+
+            UpdateListCount();
+        }
+
+        private void removeBtn_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem listViewItem in this.activeList.SelectedItems)
+            {
+                this.ParentForm.MagicMinistry.ActiveMagicians.RemoveAt(listViewItem.Index);
+                this.activeList.Items.RemoveAt(listViewItem.Index);
+            }
+
+            UpdateListCount();
+        }
+
+        private void UpdateListCount()
+        {
+            this.totalActive.Text   = this.activeList.Items.Count.ToString();
+            this.totalDisabled.Text = this.disabledList.Items.Count.ToString();
         }
     }
 }

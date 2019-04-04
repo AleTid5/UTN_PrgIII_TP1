@@ -49,6 +49,8 @@ namespace Tidele_Alejandro.Forms
             this.cb4.Checked = false;
             this.cb5.Checked = false;
             this.magicianId = 0;
+            this.create.Text = "Crear";
+            this.create.BackColor = System.Drawing.Color.DarkRed;
         }
 
         private void create_Click(object sender, EventArgs e)
@@ -87,6 +89,9 @@ namespace Tidele_Alejandro.Forms
                 }
 
                 this.ParentForm.Magicians[i] = this.CurrentMagician;
+
+                this.create.Text = "Crear";
+                this.create.BackColor = System.Drawing.Color.DarkRed;
             } else
             {
                 this.ParentForm.magicianID++;
@@ -129,6 +134,8 @@ namespace Tidele_Alejandro.Forms
             objectSelected = this.dgvMagicians.CurrentRow.DataBoundItem;
             Magician selectedMagician = (Magician) objectSelected;
             this.magicianId = selectedMagician.Id;
+            this.create.Text = "Editar";
+            this.create.BackColor = System.Drawing.SystemColors.Desktop;
             this.SetEditableForm(selectedMagician);
 
             BindedList.ResetBindings();
@@ -142,6 +149,7 @@ namespace Tidele_Alejandro.Forms
             objectSelected = this.dgvMagicians.CurrentRow.DataBoundItem;
             Magician selectedMagician = (Magician) objectSelected;
             this.ParentForm.Magicians.Remove(selectedMagician);
+            this.cleanBtn_Click(sender, e);
 
             BindedList.ResetBindings();
         }
