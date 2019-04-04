@@ -75,7 +75,7 @@
             // closeAll
             // 
             this.closeAll.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.closeAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeAll.Cursor = System.Windows.Forms.Cursors.Default;
             this.closeAll.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.closeAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,6 +135,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hogwarts School | Draco Dormiens Nunquam Titillandus";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -148,9 +149,9 @@
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem BrujasYMagosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem miembrosDelMinisterioDeMagiaToolStripMenuItem;
-        private System.Windows.Forms.Button closeAll;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button closeAll;
     }
 }
 

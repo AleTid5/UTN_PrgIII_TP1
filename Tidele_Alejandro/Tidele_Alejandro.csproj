@@ -102,6 +102,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Harry Potter Cursor Link Select.ani" />
     <None Include="Resources\Snitch.png" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +131,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Morsmordre1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Harry Potter Theme Song.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Harry Potter Cursor Normal Wand.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Harry Hover.cur" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

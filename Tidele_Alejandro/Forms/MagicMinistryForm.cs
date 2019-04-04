@@ -28,6 +28,8 @@ namespace Tidele_Alejandro.Forms
 
         private void MagicMinistryForm_Load(object sender, EventArgs e)
         {
+            this.InitializeCursor();
+
             foreach (string magician in this.ParentForm.MagicMinistry.InactiveMagicians)
             {
                 ListViewItem list = new ListViewItem(magician);
@@ -115,6 +117,17 @@ namespace Tidele_Alejandro.Forms
         {
             this.totalActive.Text   = this.activeList.Items.Count.ToString();
             this.totalDisabled.Text = this.disabledList.Items.Count.ToString();
+        }
+
+        private void InitializeCursor()
+        {
+            this.Cursor = this.ParentForm.Cursor;
+            this.createBtn.Cursor = this.ParentForm.closeAll.Cursor;
+            this.activateBtn.Cursor = this.ParentForm.closeAll.Cursor;
+            this.activateAllBtn.Cursor = this.ParentForm.closeAll.Cursor;
+            this.disableBtn.Cursor = this.ParentForm.closeAll.Cursor;
+            this.removeBtn.Cursor = this.ParentForm.closeAll.Cursor;
+            this.goBack.Cursor = this.ParentForm.closeAll.Cursor;
         }
     }
 }

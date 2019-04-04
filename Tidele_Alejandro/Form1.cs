@@ -24,6 +24,18 @@ namespace Tidele_Alejandro
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.Harry_Potter_Theme_Song);
+            player.PlayLooping();
+            System.IO.MemoryStream normal = new System.IO.MemoryStream(Properties.Resources.Harry_Potter_Cursor_Normal_Wand);
+            System.IO.MemoryStream hover = new System.IO.MemoryStream(Properties.Resources.Harry_Hover);
+            this.Cursor = new Cursor(normal);
+            this.closeAll.Cursor = new Cursor(hover);
+            this.button1.Cursor = this.closeAll.Cursor;
+            this.button2.Cursor = this.closeAll.Cursor;
+        }
+
         private void BrujasYMagosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MagicianForm magicianForm = new MagicianForm();

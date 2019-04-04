@@ -32,6 +32,7 @@ namespace Tidele_Alejandro.Forms
             this.House.SelectedItem = "Gryffindor";
             BindedList = new BindingList<Magician>(this.ParentForm.Magicians);
             this.dgvMagicians.DataSource = BindedList;
+            this.InitializeCursor();
         }
 
         private void cleanBtn_Click(object sender, EventArgs e)
@@ -192,6 +193,27 @@ namespace Tidele_Alejandro.Forms
             this.cb3.Checked = subject[3];
             this.cb4.Checked = subject[4];
             this.cb5.Checked = subject[5];
+        }
+
+        private void InitializeCursor()
+        {
+            this.Cursor = this.ParentForm.Cursor;
+            this.BornDate.Cursor = this.ParentForm.closeAll.Cursor;
+            this.Magician.Cursor = this.ParentForm.closeAll.Cursor;
+            this.Witch.Cursor = this.ParentForm.closeAll.Cursor;
+            this.Muggle.Cursor = this.ParentForm.closeAll.Cursor;
+            this.House.Cursor = this.ParentForm.closeAll.Cursor;
+            this.cb0.Cursor = this.ParentForm.closeAll.Cursor;
+            this.cb1.Cursor = this.ParentForm.closeAll.Cursor;
+            this.cb2.Cursor = this.ParentForm.closeAll.Cursor;
+            this.cb3.Cursor = this.ParentForm.closeAll.Cursor;
+            this.cb4.Cursor = this.ParentForm.closeAll.Cursor;
+            this.cb5.Cursor = this.ParentForm.closeAll.Cursor;
+            this.cleanBtn.Cursor = this.ParentForm.closeAll.Cursor;
+            this.create.Cursor = this.ParentForm.closeAll.Cursor;
+            this.goBack.Cursor = this.ParentForm.closeAll.Cursor;
+            this.edit.Cursor = this.ParentForm.closeAll.Cursor;
+            this.remove.Cursor = this.ParentForm.closeAll.Cursor;
         }
     }
 }

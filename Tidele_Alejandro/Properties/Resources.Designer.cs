@@ -71,6 +71,35 @@ namespace Tidele_Alejandro.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Harry_Hover {
+            get {
+                object obj = ResourceManager.GetObject("Harry_Hover", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Harry_Potter_Cursor_Normal_Wand {
+            get {
+                object obj = ResourceManager.GetObject("Harry_Potter_Cursor_Normal_Wand", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Harry_Potter_Theme_Song {
+            get {
+                return ResourceManager.GetStream("Harry_Potter_Theme_Song", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Hogwarts {
@@ -106,16 +135,6 @@ namespace Tidele_Alejandro.Properties {
         internal static System.Drawing.Bitmap Magicians1 {
             get {
                 object obj = ResourceManager.GetObject("Magicians1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Morsmordre {
-            get {
-                object obj = ResourceManager.GetObject("Morsmordre", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
