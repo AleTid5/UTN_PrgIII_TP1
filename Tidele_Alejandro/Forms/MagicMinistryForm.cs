@@ -62,6 +62,13 @@ namespace Tidele_Alejandro.Forms
             foreach (ListViewItem listViewItem in this.disabledList.SelectedItems)
             {
                 string magician = this.ParentForm.MagicMinistry.InactiveMagicians[listViewItem.Index];
+                
+                if (this.ExistInActiveList(magician))
+                {
+                    MessageBox.Show("No se puede activar al mago " + magician);
+                    continue;
+                }
+
                 this.ParentForm.MagicMinistry.InactiveMagicians.RemoveAt(listViewItem.Index);
                 this.ParentForm.MagicMinistry.ActiveMagicians.Add(magician);
                 ListViewItem list = new ListViewItem(magician);
@@ -92,6 +99,13 @@ namespace Tidele_Alejandro.Forms
             foreach (ListViewItem listViewItem in this.activeList.SelectedItems)
             {
                 string magician = this.ParentForm.MagicMinistry.ActiveMagicians[listViewItem.Index];
+                
+                if (this.ExistInActiveList(magician))
+                {
+                    MessageBox.Show("No se puede activar al mago " + magician);
+                    continue;
+                }
+
                 this.ParentForm.MagicMinistry.ActiveMagicians.RemoveAt(listViewItem.Index);
                 this.ParentForm.MagicMinistry.InactiveMagicians.Add(magician);
                 ListViewItem list = new ListViewItem(magician);
@@ -117,6 +131,14 @@ namespace Tidele_Alejandro.Forms
         {
             this.totalActive.Text   = this.activeList.Items.Count.ToString();
             this.totalDisabled.Text = this.disabledList.Items.Count.ToString();
+        }        
+
+        private bool ExistInActiveList(string magicianToActivate)
+        {
+            foreach (string magician in this.ParentForm.MagicMinistry.ActiveMagicians)
+                if (magician == magicianToActivate) return true;
+
+            return false;
         }
 
         private void InitializeCursor()
